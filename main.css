@@ -1,0 +1,4 @@
+#buttonDiv, #searchDiv {
+    display: flex;
+    justify-content: center;
+}

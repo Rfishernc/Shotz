@@ -11,8 +11,8 @@ function getLocations() {
 function locationsBuilder(locations) {
     let domString = '';
     for(let i = 0; i < locations.length; i++) {
-        domString += `<div class="card ${locations[i].shootTime}" style="width: 18rem;">`
-        domString +=     `<img class="card-img-top" src="${locations[i].image}" alt="Card image cap">`
+        domString += `<div class="card ${locations[i].shootTime} col">`
+        domString +=     `<img class="card-img-top locimage" src="${locations[i].image}" alt="Card image cap">`
         domString +=     `<div class="card-body">`
         domString +=         `<h5 class="card-title locName">${locations[i].name}</h5>`
         domString +=         `<p class="card-text locAddress">${locations[i].address}</p>`
