@@ -1,0 +1,24 @@
+let movies = [];
+
+function setMovies(data) {
+    movies = data;
+}
+
+function getMovies() {
+    return movies;
+}
+
+function movieBuilder(movies) {
+    let domString = '';
+    for(let i = 0; i < movies.length; i++) {
+        domString += `<div class="jumbotron">`
+        domString +=    `<h1 class="display-4">${movies[i].name}</h1>`
+        domString +=    `<p class="lead">${movies[i].description}</p>`
+        domString +=    `<hr class="my-4">`
+        domString +=    `<p>${movies[i].genre} ${movies[i].release}</p>`
+        domString += `</div>`
+    }
+    $('#moviePrintDiv').append(domString);
+}
+
+export {setMovies, getMovies, movieBuilder};
