@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+<body>    
+    <div id='moviePrintDiv'></div>
+    <div class="btn-group" role="group" aria-label="Basic example" id='buttonDiv'>
+            <button type="button" class="btn btn-secondary timeButton" id='Morning'>Morning</button>
+            <button type="button" class="btn btn-secondary timeButton" id='Afternoon'>Afternoon</button>
+            <button type="button" class="btn btn-secondary timeButton" id='Evening'>Evening</button>
+            <button type="button" class="btn btn-secondary timeButton" id='After Dark'>After Dark</button>
+        </div>
+    <div id='searchDiv'>    
+        <h4 id='search'>Search</h4>
+        <input type="text" id='input'>
+    </div>
+    <div class='container'>
+        <div id='locationPrintDiv' class='row'></div>   
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="./js/comp/locationComp.js" type='module'></script>
+    <script src="./js/comp/movieComp.js" type='module'></script>
+    <script src="./js/data/locationData.js" type='module'></script>
+    <script src="./js/data/movieData.js" type='module'></script>
+    <script src="./js/event.js" type='module'></script>
+    <script src="./js/main.js" type='module'></script>
+</body>
+</html>

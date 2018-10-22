@@ -1,0 +1,22 @@
+{
+    "locations": [
+        {
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Empire_State_Building_%28aerial_view%29.jpg/250px-Empire_State_Building_%28aerial_view%29.jpg",
+            "name": "Empire State building",
+            "address": "20 W 34th St, New York, NY 10001",
+            "shootTime": "Evening"
+        },
+        {
+            "image": "https://cdn.vox-cdn.com/thumbor/U9oI_WEWxHSPfZOwLfwCHNcDJLc=/0x0:1024x688/1200x800/filters:focal(431x263:593x425)/cdn.vox-cdn.com/uploads/chorus_image/image/57017435/14976922_10154353126258141_8562641988037779196_o.0.jpg",
+            "name": "Denny's",
+            "address": "6100 Sunset Blvd, Hollywood, CA 90028",
+            "shootTime": "Morning"
+        },
+        {
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Alcatraz_Island_as_seen_from_the_East.jpg/1200px-Alcatraz_Island_as_seen_from_the_East.jpg",
+            "name": "Alcatraz",
+            "address": "San Francisco, CA 94133",
+            "shootTime": "Afternoon"
+        }
+    ]
+}
