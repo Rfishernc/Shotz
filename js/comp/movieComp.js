@@ -1,7 +1,11 @@
+import {getMovie} from '../data/movieData.js';
+
 let movies = [];
 
-function setMovies(data) {
-    movies = data;
+function setMovies() {
+    getMovie().then(function(data) {
+        movieBuilder(data);
+    })
 }
 
 function getMovies() {
