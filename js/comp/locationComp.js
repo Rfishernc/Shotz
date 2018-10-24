@@ -17,6 +17,7 @@ function locationsBuilder(locations) {
         domString +=         `<h5 class="card-title locName">${locations[i].name}</h5>`
         domString +=         `<p class="card-text locAddress">${locations[i].address}</p>`
         domString +=         `<p class="card-text">Shoot Time: ${locations[i].shootTime}</p>`
+        domString +=         `<P class='card-text'>Movies on location: ${locations[i].movies}</p>`
         domString +=     `</div>`
         domString += `</div>`
     }

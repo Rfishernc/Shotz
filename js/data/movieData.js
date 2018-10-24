@@ -1,14 +1,13 @@
-import {setMovies, getMovies, movieBuilder} from '../comp/movieComp.js';
-
 function getMovie() {
-    $.get('../../db/movie.json')
-        .done((data) => {
-            setMovies(data.movies);
-            movieBuilder(getMovies());    
+    return new Promise(function(resolve, reject) {
+        $.get('../../db/movie.json')
+            .done((data) => {
+                resolve(data.movies);
+            })
+            .fail((error) => {
+                reject(error);
+            })
         })
-        .fail((error) => {
-            console.error(error);
-        });  
-}
+    } 
 
 export {getMovie};
