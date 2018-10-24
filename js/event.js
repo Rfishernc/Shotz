@@ -1,11 +1,12 @@
 import {getLocations, locationsBuilder} from './comp/locationComp.js';
 
 function searchEvent() {
-    $('#input').keypress(function() {
+    $('#input').keyup(function() {
         $('.card').show();
-        let input = $('#input').val() + event.key;
+        let input = $('#input').val();
+        console.log(input);
         $('.card').filter(function() {
-            if($(this).find('.locName').text().includes(input) || $(this).find('.locAddress').text().includes(input) != true ) {
+            if($(this).find('.locName').text().includes(input) != true && $(this).find('.locAddress').text().includes(input) != true ) {
                 return this;
             }
         }).hide();
