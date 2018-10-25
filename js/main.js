@@ -5,8 +5,8 @@ import {searchEvent, timeOfDayEvent} from './event.js';
 function init() {
     setMovies();
     setLocations();
-    // searchEvent();
-    // timeOfDayEvent();
+    searchEvent();
+    timeOfDayEvent();
 }
 
 init();

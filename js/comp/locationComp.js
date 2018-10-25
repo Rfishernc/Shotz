@@ -29,7 +29,7 @@ function locationsBuilder(locations) {
         for(let j= 0; j < locations.locations[i].movies.length; j++) {
             movieNames = movieNames + ', ' + locations.locations[i].movies[j].name;    
         }
-        domString +=         `<P class='card-text'>Movies on location: ${movieNames}</p>`
+        domString +=         `<P class='card-text locMovies'>Movies on location: ${movieNames}</p>`
         domString +=     `</div>`
         domString += `</div>`
         movieNames = '';

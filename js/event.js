@@ -1,4 +1,5 @@
 import {getLocations, locationsBuilder} from './comp/locationComp.js';
+import {setMovies} from './comp/movieComp.js';
 
 function searchEvent() {
     $('#input').keyup(function() {
@@ -6,7 +7,7 @@ function searchEvent() {
         let input = $('#input').val();
         console.log(input);
         $('.card').filter(function() {
-            if($(this).find('.locName').text().includes(input) != true && $(this).find('.locAddress').text().includes(input) != true ) {
+            if($(this).find('.locName').text().includes(input) != true && $(this).find('.locAddress').text().includes(input) != true && $(this).find('.locMovies').text().includes(input) != true) {
                 return this;
             }
         }).hide();
@@ -25,4 +26,11 @@ function timeOfDayEvent() {
     })
 }
 
-export {searchEvent, timeOfDayEvent};
+function movieEvent() {
+    $('.movieButton').on("click", function() {
+        let clicked = $(event.target).closest('.movieButton')[0].id;
+        setMovies(clicked);
+    })
+}
+
+export {searchEvent, timeOfDayEvent, movieEvent};
