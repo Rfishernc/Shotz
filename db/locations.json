@@ -1,22 +1,52 @@
 {
     "locations": [
         {
+            "id": "1",
             "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Empire_State_Building_%28aerial_view%29.jpg/250px-Empire_State_Building_%28aerial_view%29.jpg",
             "name": "Empire State building",
             "address": "20 W 34th St, New York, NY 10001",
-            "shootTime": "Evening"
+            "shootTime": "Evening",
+            "movies": []
         },
         {
+            "id": "2",
             "image": "https://cdn.vox-cdn.com/thumbor/U9oI_WEWxHSPfZOwLfwCHNcDJLc=/0x0:1024x688/1200x800/filters:focal(431x263:593x425)/cdn.vox-cdn.com/uploads/chorus_image/image/57017435/14976922_10154353126258141_8562641988037779196_o.0.jpg",
             "name": "Denny's",
             "address": "6100 Sunset Blvd, Hollywood, CA 90028",
-            "shootTime": "Morning"
+            "shootTime": "Morning",
+            "movies": []
         },
         {
+            "id": "3",
             "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Alcatraz_Island_as_seen_from_the_East.jpg/1200px-Alcatraz_Island_as_seen_from_the_East.jpg",
             "name": "Alcatraz",
             "address": "San Francisco, CA 94133",
-            "shootTime": "Afternoon"
+            "shootTime": "Afternoon",
+            "movies": []
+        },
+        {
+            "id": "4",
+            "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F43476614%2F131446625265%2F1%2Foriginal.jpg?auto=compress&s=150e0d60de49b41a649350c309146642",
+            "name": "Nashville Software School",
+            "address": " 500 Interstate Blvd S #300, Nashville, TN 37210",
+            "shootTime": "After Dark",
+            "movies": []
+        },
+        {
+            "id": "5",
+            "image": "https://www.yellowstonepark.com/.image/t_share/MTU0ODMzMDA2MjMyNjEwODAx/ys-grand-prismatic_tamtroyhendrickson_700.jpg",
+            "name": "Yellowstone",
+            "address": "Yellowstone National Park, WY",
+            "shootTime": "Afternoon",
+            "movies": []
+        },
+        {
+            "id": "6",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Buckingham_Palace_from_gardens%2C_London%2C_UK_-_Diliff_%28cropped%29.jpg/350px-Buckingham_Palace_from_gardens%2C_London%2C_UK_-_Diliff_%28cropped%29.jpg",
+            "name": "Buckingham Palace",
+            "address": "Westminster, London SW1A 1AA, UK",
+            "shootTime": "Evening",
+            "movies": []
         }
     ]
 }

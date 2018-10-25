@@ -1,14 +1,24 @@
-import {setMovies, getMovies, movieBuilder} from '../comp/movieComp.js';
-
-function getMovie() {
-    $.get('../../db/movie.json')
-        .done((data) => {
-            setMovies(data.movies);
-            movieBuilder(getMovies());    
+function getMovie(id) {
+    return new Promise(function(resolve, reject) {
+        $.get('../../db/movie.json')
+            .done((data) => {
+                if(id !== undefined) {
+                    let filteredMovies = [];
+                    for(let i = 0; i < data.movies.length; i++) {
+                        if(data.movies[i].id == id) {
+                            filteredMovies.push(data.movies[i]);
+                            resolve(filteredMovies);
+                            break;
+                        }
+                    }
+                }
+                else {
+                    resolve(data.movies);}
+            })
+            .fail((error) => {
+                reject(error);
+            })
         })
-        .fail((error) => {
-            console.error(error);
-        });  
-}
+    } 
 
 export {getMovie};

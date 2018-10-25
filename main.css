@@ -2,3 +2,14 @@
     display: flex;
     justify-content: center;
 }
+
+.movies {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.row {
+    margin-left: -130px;
+    margin-right: 0;
+    flex-wrap: nowrap;
+}

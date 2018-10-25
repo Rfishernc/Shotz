@@ -1,14 +1,21 @@
-import {setLocations, getLocations, locationsBuilder} from '../comp/locationComp.js';
-
-function getLocation() {
+function getLocation(movieList) {
+    return new Promise(function(resolve, reject) {
     $.get('../../db/locations.json')
         .done((data) => {
-            setLocations(data.locations);
-            locationsBuilder(getLocations());    
+            for(let i = 0; i < data.locations.length; i++) {
+                for(let j = 0; j < movieList.length; j++) {
+                    if(movieList[j].locations.includes(data.locations[i].id)) {
+                        data.locations[i].movies.push(movieList[j]);
+                    }
+                }
+            }
+            resolve(data);
+
         })
         .fail((error) => {
-            console.error(error);
-        });  
-}
+            reject(error);
+        })
+    })
+} 
 
-export {getLocation};
+export {getLocation}; 

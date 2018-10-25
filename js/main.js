@@ -1,10 +1,10 @@
-import {getMovie} from './data/movieData.js';
-import {getLocation} from './data/locationData.js';
+import {setMovies} from '../js/comp/movieComp.js';
+import {setLocations} from '../js/comp/locationComp.js';
 import {searchEvent, timeOfDayEvent} from './event.js';
 
 function init() {
-    getMovie();
-    getLocation();
+    setMovies();
+    setLocations();
     searchEvent();
     timeOfDayEvent();
 }
