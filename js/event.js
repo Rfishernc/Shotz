@@ -36,7 +36,6 @@ function movieEvent() {
         else {
             clickedName = $(event.target).find('.movieName')[0].id;
         }
-        console.log(clickedName);
         setMovies(clicked);
         $('.card').show;
         $('.card').filter(function() {
@@ -47,4 +46,10 @@ function movieEvent() {
     })
 }
 
-export {searchEvent, timeOfDayEvent, movieEvent};
+function backEvent() {
+    $('#backButton').on('click', function() {
+        setMovies();
+    })
+}
+
+export {searchEvent, timeOfDayEvent, movieEvent, backEvent};

@@ -1,9 +1,12 @@
 import {getMovie} from '../data/movieData.js';
-import {movieEvent} from '../event.js';
+import {movieEvent, backEvent} from '../event.js';
 
 function setMovies(id) {
     getMovie(id).then(function(data) {
         movieBuilder(data);
+        if(id !== undefined) {
+            makeBackBtn();
+        }
     })
 }
 
@@ -24,6 +27,15 @@ function movieBuilder(movies) {
     }
     $('#moviePrintDiv').append(domString);
     movieEvent();
+}
+
+function makeBackBtn() {
+    let domString = '';
+    domString += `<div>`
+    domString +=    `<button type="button" class="btn btn-primary" id='backButton'>Back</button>`
+    domString += `</div>`;
+    $('#moviePrintDiv').append(domString);
+    backEvent();
 }
 
 export {setMovies, getMovies, movieBuilder};
