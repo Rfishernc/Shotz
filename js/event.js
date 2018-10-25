@@ -29,7 +29,21 @@ function timeOfDayEvent() {
 function movieEvent() {
     $('.movieButton').on("click", function() {
         let clicked = $(event.target).closest('.movieButton')[0].id;
+        let clickedName;
+        if($(event.target).siblings('.movieName')[0] !== undefined) {
+            clickedName = $(event.target).siblings('.movieName')[0].id;
+        }
+        else {
+            clickedName = $(event.target).find('.movieName')[0].id;
+        }
+        console.log(clickedName);
         setMovies(clicked);
+        $('.card').show;
+        $('.card').filter(function() {
+            if($(this).find('.locMovies').text().includes(clickedName) != true) {
+                return this;
+            }
+        }).hide();
     })
 }
 
