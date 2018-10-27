@@ -34,7 +34,7 @@ function locationsBuilder(locations) {
         domString += `</div>`
         movieNames = '';
     }
-    $('#locationPrintDiv').append(domString);
+    $('#locationPrintDiv').html(domString);
 }
 
 export {setLocations, getLocations, locationsBuilder};

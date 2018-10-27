@@ -1,4 +1,4 @@
-import {getLocations, locationsBuilder} from './comp/locationComp.js';
+import {setLocations} from './comp/locationComp.js';
 import {setMovies} from './comp/movieComp.js';
 
 function searchEvent() {
@@ -33,6 +33,9 @@ function movieEvent() {
         if($(event.target).siblings('.movieName')[0] !== undefined) {
             clickedName = $(event.target).siblings('.movieName')[0].id;
         }
+        else if(($(event.target).closest('.movieName')[0] !== undefined)) {
+            clickedName = $(event.target).closest('.movieName')[0].id;
+        }
         else {
             clickedName = $(event.target).find('.movieName')[0].id;
         }
@@ -49,6 +52,7 @@ function movieEvent() {
 function backEvent() {
     $('#backButton').on('click', function() {
         setMovies();
+        setLocations();
     })
 }
 
