@@ -40,7 +40,7 @@ function movieEvent() {
             clickedName = $(event.target).find('.movieName')[0].id;
         }
         setMovies(clicked);
-        $('.card').show;
+        $('.card').show();
         $('.card').filter(function() {
             if($(this).find('.locMovies').text().includes(clickedName) != true) {
                 return this;
@@ -52,7 +52,8 @@ function movieEvent() {
 function backEvent() {
     $('#backButton').on('click', function() {
         setMovies();
-        setLocations();
+        // setLocations();
+        $('.card').show();
     })
 }
 
